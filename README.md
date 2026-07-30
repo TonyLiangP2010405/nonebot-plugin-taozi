@@ -1,0 +1,188 @@
+# nonebot-plugin-taozi
+
+图片化的有出处桃系词典与可选轻互动 NoneBot2 插件。
+
+本项目是**非官方粉丝插件**。词典根据公开内容整理，明确显示所指对象、可信度、
+语境边界、核验日期和代表出处；轻互动文案仅供娱乐，不冒充主播原话。正常回复会渲染
+为 PNG 卡片，词典卡片附代表出处二维码；渲染失败时默认自动回退为纯文本。
+
+## 功能
+
+- 查询桃系词条，显示来源和语境边界；
+- 使用 Skia 直接生成 PNG，无需安装 Chromium、Playwright 或启动浏览器；
+- 卡片标题区使用基于 UID `6867955` 当前公开头像角色绘制的淡背景插画；
+- 词典图片附第一条代表出处的二维码，方便从图片继续查看来源；
+- 随机抽取一个有出处的桃系词条；
+- 每位用户每天获得稳定一致的“今日桃签”；
+- 用户主动选择或取消自己的玩笑桃色；
+- 群主、群管理员或 NoneBot 超级用户可按群关闭轻互动；
+- 关闭轻互动后，词典查询仍然可用；
+- 状态使用 `nonebot-plugin-localstore` 持久化，不需要数据库。
+
+内置词条：
+
+`黑桃`、`白桃`、`黄桃`、`红桃`、`学霸桃`、`AI 桃`、`嘟嘟桃`
+
+## 安装
+
+使用 nb-cli：
+
+```bash
+nb plugin install nonebot-plugin-taozi
+```
+
+使用 pip：
+
+```bash
+pip install nonebot-plugin-taozi
+```
+
+使用 Poetry：
+
+```bash
+poetry add nonebot-plugin-taozi
+```
+
+从源码参与开发：
+
+```bash
+git clone https://github.com/TonyLiangP2010405/nonebot-plugin-taozi.git
+cd nonebot-plugin-taozi
+poetry install
+```
+
+在机器人项目的 `pyproject.toml` 中加载插件：
+
+```toml
+[tool.nonebot]
+plugins = ["nonebot_plugin_taozi"]
+```
+
+## 运行要求
+
+- Python `3.12` 或 `3.13`
+- NoneBot2 `>=2.5.0`
+- OneBot V11 适配器
+
+插件采用 OneBot V11，是因为群主和群管理员权限属于适配器能力。词典和互动核心逻辑
+已与命令层分离，后续可以增加其他适配器入口。
+
+图片由 `skia-python` 原生绘制。锁定版本在 Linux x86_64、Linux aarch64、macOS 和
+Windows 上均提供 Python 3.12/3.13 预编译 wheel，云端不需要编译 Skia。
+
+### 云端中文字体
+
+插件会自动寻找常见中文字体。Linux 镜像建议安装 Noto CJK，例如 Debian/Ubuntu：
+
+```bash
+apt-get update && apt-get install -y fonts-noto-cjk
+```
+
+如果镜像中的字体位置不同，可以显式配置：
+
+```dotenv
+TAOZI_FONT=/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc
+```
+
+多个候选路径用半角分号分隔。字体缺失时插件仍会启动，并在日志中提示；若图片生成失败，
+默认发送原始文字回复。
+
+## 配置
+
+所有配置均为可选项，插件可以零配置加载。
+
+| 配置项 | 默认值 | 说明 |
+|---|---:|---|
+| `TAOZI_FUN_ENABLED` | `true` | 全局开启轻互动；关闭后词典仍可使用 |
+| `TAOZI_FUN_COOLDOWN_SECONDS` | `8` | 同一用户、同一互动指令的冷却秒数，范围 0–300 |
+| `TAOZI_LEXICON_SHOW_SOURCES` | `true` | 词典和随机词条是否显示来源链接 |
+| `TAOZI_TIMEZONE` | `Asia/Shanghai` | 今日桃签使用的日期时区 |
+| `TAOZI_IMAGE_ENABLED` | `true` | 将正常回复渲染为 PNG 图片 |
+| `TAOZI_IMAGE_FALLBACK_TEXT` | `true` | 图片生成失败时回退为纯文本 |
+| `TAOZI_FONT` | 空 | 可选中文字体路径；多个路径以分号分隔 |
+
+配置示例见 [`.env.example`](.env.example)。
+
+## 指令
+
+是否需要命令前缀取决于机器人项目的 `COMMAND_START` 配置。下表用 `/` 演示。
+
+| 指令 | 权限 | 范围 | 说明 |
+|---|---|---|---|
+| `/桃纸帮助` | 所有人 | 群聊/私聊 | 查看帮助 |
+| `/桃系词典` | 所有人 | 群聊/私聊 | 列出已收录词条 |
+| `/桃系词典 黑桃` | 所有人 | 群聊/私聊 | 查询解释、边界与出处 |
+| `/随机桃词` | 所有人 | 群聊/私聊 | 随机展示一个有出处的词条 |
+| `/今日桃签` | 所有人 | 群聊/私聊 | 获取当日稳定桃签 |
+| `/我的桃色` | 所有人 | 群聊/私聊 | 查看自己的自选桃色 |
+| `/我的桃色 黑桃` | 所有人 | 群聊/私聊 | 主动选择一个玩笑身份 |
+| `/我的桃色 取消` | 所有人 | 群聊/私聊 | 移除自选桃色 |
+| `/取消桃色` | 所有人 | 群聊/私聊 | 移除自选桃色的快捷指令 |
+| `/桃趣状态` | 所有人 | 群聊/私聊 | 查看当前会话的互动开关 |
+| `/桃趣 开启` | 群主/群管理/超级用户 | 群聊 | 开启本群轻互动 |
+| `/桃趣 关闭` | 群主/群管理/超级用户 | 群聊 | 关闭本群轻互动 |
+
+词典卡片展示词条、所指对象、可信度、核验日期、解释、语境边界和代表出处；第一条来源
+会生成二维码。关闭 `TAOZI_LEXICON_SHOW_SOURCES` 后，来源文字与二维码会同时隐藏。
+
+### 自选桃色的边界
+
+插件不会分析聊天内容，也不会自动给任何群友贴“黑桃”或“黑粉”标签。桃色只能由用户
+主动选择，并且可以随时取消。`红桃`的稳定社区含义尚未核实，选择它时插件会明确提示。
+
+## 词典数据
+
+词典位于：
+
+```text
+nonebot_plugin_taozi/resources/lexicon.json
+```
+
+每个词条必须提供：
+
+- 标准名称和别名；
+- 解释与所指对象；
+- 高、中或低可信度；
+- 不应越过的解释边界；
+- 最后核验日期；
+- 至少一个 HTTPS 公开来源。
+
+数据在插件加载时通过 Pydantic 校验。格式错误、重复别名或缺少来源会使测试失败，避免
+把未经核验的说法静默带入发布版本。
+
+更完整的背景研究见
+[调研报告](docs/小小桃纸哟_博主调研报告_2026-07-30.md)。
+
+## 开发与测试
+
+```bash
+poetry install
+poetry run python -m compileall nonebot_plugin_taozi
+poetry run pytest
+poetry run ruff check .
+poetry build
+```
+
+GitHub Actions 会分别在 Python 3.12 和 3.13 下执行。测试覆盖 PNG 生成和动态高度、
+词典图片命令、别名与建议、每日桃签稳定性、冷却、桃色输入边界、状态持久化，以及
+NoneBot 插件加载。
+
+## 实现参考
+
+图片渲染方案参考了 MIT 许可的
+[nonebot-plugin-daily-attendance](https://github.com/TonyLiangP2010405/nonebot-plugin-daily-attendance)：
+沿用“Skia 原生绘制 + 系统中文字体探测 + 直接发送 PNG 字节”的部署思路。本插件的卡片
+版式、动态高度、来源二维码、异步线程封装和降级逻辑均按自身需求实现。
+
+## 隐私与版权
+
+- 不收集聊天内容或构建群成员画像；
+- 只保存群级互动开关和用户主动选择的桃色；
+- 不直接内置或搬运主播音频、原始头像，不做 AI 声音克隆或第一人称拟态回复；
+- 卡片角色图是依据账号当前公开头像重新绘制的非官方装饰素材，不表示主播授权；
+- 来源链接指向原始 B 站页面，不搬运完整视频；
+- 公开发布或使用名称、形象素材前，仍应确认授权和平台规则。
+
+## License
+
+[MIT](LICENSE)

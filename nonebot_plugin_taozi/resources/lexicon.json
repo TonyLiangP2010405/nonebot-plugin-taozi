@@ -1,0 +1,122 @@
+[
+  {
+    "term": "黑桃",
+    "aliases": ["黑粉桃"],
+    "meaning": "“黑粉”的谐称，常指在联机游戏或直播互动中故意捉弄、围攻、拆台主播的对抗型水友或舰长。",
+    "subject": "水友立场",
+    "confidence": "高",
+    "boundary": "整体多为熟人式玩笑，不等同于恶意攻击者；也不应由机器人未经本人同意自动给群友贴标签。",
+    "verified_at": "2026-07-30",
+    "sources": [
+      {
+        "title": "录播原片：“最大的黑桃”与“直播间的黑桃”语境",
+        "url": "https://www.bilibili.com/video/BV17vDaBjE3a/",
+        "note": "主播把妈妈称为最大的黑桃，并与直播间的黑桃比较。"
+      },
+      {
+        "title": "录播：“代抽造就黑桃”语境",
+        "url": "https://www.bilibili.com/video/BV179DJB1E5Z/",
+        "note": "代抽翻车是支持者转为玩笑式黑粉的剧情语境，不是词语核心定义。"
+      }
+    ]
+  },
+  {
+    "term": "白桃",
+    "aliases": [],
+    "meaning": "常作为与黑桃相对的支持型、正向水友称呼；部分语境同时带有“白”或“欧”的正向运气联想。",
+    "subject": "水友立场",
+    "confidence": "中",
+    "boundary": "公开样本能够确认其与黑桃并列并用于水友互动，但尚未找到主播给出的正式、稳定定义。",
+    "verified_at": "2026-07-30",
+    "sources": [
+      {
+        "title": "粉丝切片：白桃、黑桃、红桃、黄桃四选一",
+        "url": "https://www.bilibili.com/video/BV1KhdUBQE8L/"
+      },
+      {
+        "title": "录播：白桃、黄桃等抽卡语境",
+        "url": "https://www.bilibili.com/video/BV19uFjzHEdB/"
+      }
+    ]
+  },
+  {
+    "term": "黄桃",
+    "aliases": ["黄桃王朝"],
+    "meaning": "面对喜欢或有魅力的角色时，进入高情绪的审美或偏好表达状态。",
+    "subject": "主播状态",
+    "confidence": "高",
+    "boundary": "这是社区结合具体直播场景形成的称呼，不应被扩写成固定人格或脱离出处的私生活判断。",
+    "verified_at": "2026-07-30",
+    "sources": [
+      {
+        "title": "粉丝切片：白桃、黑桃、红桃、黄桃四选一",
+        "url": "https://www.bilibili.com/video/BV1KhdUBQE8L/",
+        "note": "切片标题与互动中出现“黄桃王朝”。"
+      },
+      {
+        "title": "录播：白桃、黄桃等抽卡语境",
+        "url": "https://www.bilibili.com/video/BV19uFjzHEdB/"
+      }
+    ]
+  },
+  {
+    "term": "红桃",
+    "aliases": [],
+    "meaning": "已确认属于白桃、黑桃、红桃、黄桃的四色并列称呼之一。",
+    "subject": "含义待核实",
+    "confidence": "低",
+    "boundary": "公开样本不足以稳定判断触发语境；不把“害羞”“激动”或“红温”等联想写成事实。",
+    "verified_at": "2026-07-30",
+    "sources": [
+      {
+        "title": "粉丝切片：白桃、黑桃、红桃、黄桃四选一",
+        "url": "https://www.bilibili.com/video/BV1KhdUBQE8L/"
+      }
+    ]
+  },
+  {
+    "term": "学霸桃",
+    "aliases": [],
+    "meaning": "录播标题在具体小故事语境中使用的临时“X 桃”称呼。",
+    "subject": "社区造词",
+    "confidence": "中",
+    "boundary": "目前只能确认代表性用例，不能据此认定它具有长期统一的词典定义。",
+    "verified_at": "2026-07-30",
+    "sources": [
+      {
+        "title": "录播：“学霸桃小故事”语境",
+        "url": "https://www.bilibili.com/video/BV1EWDqBFEc2/"
+      }
+    ]
+  },
+  {
+    "term": "AI 桃",
+    "aliases": ["AI桃"],
+    "meaning": "用于指代与桃纸相关的 AI 翻唱或 AI 内容。",
+    "subject": "社区造词",
+    "confidence": "中",
+    "boundary": "它指向内容或模型，不代表主播本人演唱，也不意味着相关 AI 内容获得本人授权。",
+    "verified_at": "2026-07-30",
+    "sources": [
+      {
+        "title": "录播：“AI 桃曲”语境",
+        "url": "https://www.bilibili.com/video/BV1FZF7zqESa/"
+      }
+    ]
+  },
+  {
+    "term": "嘟嘟桃",
+    "aliases": [],
+    "meaning": "与特定模型、皮套或形象相关的临时“X 桃”称呼。",
+    "subject": "社区造词",
+    "confidence": "中",
+    "boundary": "现有证据只支持模型或皮套语境，不把它写成独立人格或独立账号。",
+    "verified_at": "2026-07-30",
+    "sources": [
+      {
+        "title": "录播：“嘟嘟桃”模型或皮套语境",
+        "url": "https://www.bilibili.com/video/BV1xt756wE5b/"
+      }
+    ]
+  }
+]
