@@ -14,7 +14,7 @@ from nonebot.adapters.onebot.v11.event import Sender
 from nonebug import App
 
 from nonebot_plugin_taozi import output
-from nonebot_plugin_taozi.commands import settings
+from nonebot_plugin_taozi.commands import fun, settings
 from nonebot_plugin_taozi.commands.lexicon import lexicon_command
 from nonebot_plugin_taozi.lexicon import BUILTIN_LEXICON, render_entry
 from nonebot_plugin_taozi.render import render_lexicon_card, render_message_card
@@ -44,6 +44,35 @@ def make_group_event(message: str, *, role: str = "member") -> GroupMessageEvent
 def create_onebot(app_context):
     adapter = nonebot.get_adapter(Adapter)
     return app_context.create_bot(base=Bot, adapter=adapter, self_id="10000")
+
+
+@pytest.mark.asyncio
+async def test_daily_fortune_matches_plain_text_without_slash() -> None:
+    adapter = nonebot.get_adapter(Adapter)
+    bot = Bot(adapter=adapter, self_id="10000")
+
+    assert await fun.daily_fortune.check_rule(
+        bot,
+        make_group_event("今日桃签"),
+        {},
+    )
+    assert await fun.daily_fortune.check_rule(
+        bot,
+        make_group_event("桃签"),
+        {},
+    )
+
+
+@pytest.mark.asyncio
+async def test_daily_fortune_does_not_require_or_accept_command_prefix() -> None:
+    adapter = nonebot.get_adapter(Adapter)
+    bot = Bot(adapter=adapter, self_id="10000")
+
+    assert not await fun.daily_fortune.check_rule(
+        bot,
+        make_group_event("/今日桃签"),
+        {},
+    )
 
 
 @pytest.mark.asyncio

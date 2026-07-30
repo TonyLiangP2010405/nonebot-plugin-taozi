@@ -1,6 +1,6 @@
 import secrets
 
-from nonebot import on_command
+from nonebot import on_command, on_fullmatch
 from nonebot.adapters.onebot.v11 import Message, MessageEvent
 from nonebot.params import CommandArg
 
@@ -16,9 +16,8 @@ from ..lexicon import BUILTIN_LEXICON, render_entry
 from ..output import finish_fortune_card, finish_lexicon_card, finish_message_card
 from .common import get_scope_id, get_today, require_fun, state_store
 
-daily_fortune = on_command(
-    "今日桃签",
-    aliases={"桃签"},
+daily_fortune = on_fullmatch(
+    ("今日桃签", "桃签"),
     priority=10,
     block=True,
 )
