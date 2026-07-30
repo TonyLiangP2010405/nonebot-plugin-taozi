@@ -8,6 +8,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         python-version: ["3.12", "3.13"]
 
@@ -16,6 +17,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
+      - name: Install Skia runtime libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes libegl1
       - uses: snok/install-poetry@v1
       - run: poetry install --no-interaction
       - run: poetry run python -m compileall nonebot_plugin_taozi
