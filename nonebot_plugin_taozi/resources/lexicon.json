@@ -1,8 +1,8 @@
 [
   {
     "term": "黑桃",
-    "aliases": ["黑粉桃", "最大黑桃"],
-    "meaning": "“黑粉”的谐称，常指在联机、抽卡或直播互动中故意捉弄、唱反调、拆台主播的对抗型水友或熟人。",
+    "aliases": ["黑粉桃", "最大黑桃", "黑桃吃保底"],
+    "meaning": "“黑粉”的谐称，常指在联机、抽卡或直播互动中故意捉弄、唱反调、拆台主播的对抗型水友或熟人；抽卡语境中也指“不够白（欧气）也不够黄（审美）”的非酋立场，所谓“黑桃吃保底”。",
     "subject": "水友立场",
     "confidence": "高",
     "boundary": "整体多为熟人式玩笑，不等同于恶意攻击者；抽卡翻车只是产生黑桃剧情的一种场景，机器人也不应未经本人同意给群友贴这个标签。",
@@ -14,6 +14,11 @@
         "note": "主播把妈妈称为最大的黑桃，并与直播间的黑桃比较。"
       },
       {
+        "title": "官方录播：兹白龙王卡池代抽分 P3 字幕",
+        "url": "https://www.bilibili.com/video/BV19uFjzHEdB/",
+        "note": "字幕出现“你其实是黑桃”“你不够白也不够黄”“白桃提现金，黑桃吃保底”。"
+      },
+      {
         "title": "官方录播章节：“代抽造就黑桃”",
         "url": "https://www.bilibili.com/video/BV1t9qPBpEZt/",
         "note": "代抽翻车把支持者变成玩笑式黑粉，说明黑桃的核心是互动立场而非单纯运气。"
@@ -22,20 +27,26 @@
   },
   {
     "term": "白桃",
-    "aliases": ["白桃会赢嘛"],
-    "meaning": "常作为与黑桃相对的支持型、正向水友称呼；在抽卡语境中也会带有“白、欧、顺利”的好运联想。",
+    "aliases": ["白桃会赢嘛", "铁血白桃", "白桃应有尽有"],
+    "meaning": "与黑桃相对的正向水友称呼：抽卡语境中指“应有尽有”的欧气阵营，口号有“白桃应有尽有”“白桃是对的”，对立面是“黑桃吃保底”；也用于称呼会给主播投喂的支持型水友。",
     "subject": "水友立场",
-    "confidence": "中",
-    "boundary": "公开样本能够确认其与黑桃对举并用于水友或抽卡互动，但尚未找到主播给出的唯一正式定义。",
+    "confidence": "高",
+    "boundary": "定义来自直播互动与录播分 P 语境，会随场景变化；机器人不应未经本人同意给群友贴这个标签。",
     "verified_at": "2026-08-01",
     "sources": [
       {
-        "title": "粉丝切片：白桃、黑桃、红桃、黄桃四选一",
-        "url": "https://www.bilibili.com/video/BV1KhdUBQE8L/"
+        "title": "官方录播：“白桃应有尽有！但师父的大手。。”",
+        "url": "https://www.bilibili.com/video/BV19uFjzHEdB/",
+        "note": "分 P 标题与同场字幕多次出现“白桃应有尽有”“白桃提现金，黑桃吃保底”。"
       },
       {
-        "title": "官方录播章节：“白桃应有尽有”“白桃会赢嘛”",
-        "url": "https://www.bilibili.com/video/BV1eGcPz9EeF/"
+        "title": "官方录播章节：“感谢白桃的投喂”",
+        "url": "https://www.bilibili.com/video/BV1Pm5m62EAR/",
+        "note": "确认白桃也用于称呼投喂型支持水友。"
+      },
+      {
+        "title": "粉丝切片：白桃、黑桃、红桃、黄桃四选一",
+        "url": "https://www.bilibili.com/video/BV1KhdUBQE8L/"
       }
     ]
   },
@@ -56,18 +67,28 @@
       {
         "title": "粉丝切片：四色桃选择与“黄桃王朝”",
         "url": "https://www.bilibili.com/video/BV1KhdUBQE8L/"
+      },
+      {
+        "title": "切片与录播字幕：“黄桃大将军”",
+        "url": "https://www.bilibili.com/video/BV1CBP1zZEgD/",
+        "note": "“重铸黄桃荣光，我黄桃大将军义不容辞”等用法，说明黄桃已发展成水友阵营称呼。"
       }
     ]
   },
   {
     "term": "红桃",
     "aliases": [],
-    "meaning": "已确认属于白桃、黑桃、红桃、黄桃的四色并列称呼之一。",
+    "meaning": "白桃、黑桃、红桃、黄桃四色并列称呼之一；在抽卡录播语境中被解释为与“限定”相关（限定角色、限定池），同场还有“限定会出现黄桃”的说法。",
     "subject": "含义待核实",
     "confidence": "低",
-    "boundary": "公开样本不足以稳定判断触发语境；不把“害羞”“激动”“红温”或其他颜色联想写成事实。",
+    "boundary": "现有证据只来自一场抽卡录播的口播字幕，单语境、未经主播正式定义，不能确定是否为稳定含义；也不把“害羞”“红温”等颜色联想写成事实。",
     "verified_at": "2026-08-01",
     "sources": [
+      {
+        "title": "官方录播：兹白龙王卡池代抽分 P3 字幕",
+        "url": "https://www.bilibili.com/video/BV19uFjzHEdB/",
+        "note": "字幕出现“那红桃呢，红桃红桃只是这个限定啊”“限定会出现黄桃”。"
+      },
       {
         "title": "粉丝切片：白桃、黑桃、红桃、黄桃四选一",
         "url": "https://www.bilibili.com/video/BV1KhdUBQE8L/"
@@ -585,6 +606,508 @@
       {
         "title": "官方投稿：资深老农民深度体验星布谷地",
         "url": "https://www.bilibili.com/video/BV1LYdmBaEAq/"
+      }
+    ]
+  },
+  {
+    "term": "币战",
+    "aliases": ["货币战争", "染上币战"],
+    "meaning": "崩坏：星穹铁道 4.4 版本「货币战争」玩法的简称；2026 年 7 月主播入坑崩铁后成为直播间高频内容，官方录播章节反复出现“币战启动”“深夜币战”，切片调侃她“染上币战，睡觉都在想币战”。",
+    "subject": "社区造词",
+    "confidence": "高",
+    "boundary": "它是游戏版本玩法的通用简称，不是主播独创词；热度随版本变化，也与现实中的货币、金融行为无关。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播：【崩铁】刚来，怎么又在玩币战？",
+        "url": "https://www.bilibili.com/video/BV1hU3x6REED/",
+        "note": "同期还有“先币战再看小绝生日会”“深夜币战，启动！”等多期录播。"
+      },
+      {
+        "title": "粉丝切片：桃纸染上崩铁币战，睡觉都在想币战",
+        "url": "https://www.bilibili.com/video/BV1BpGA6MEbZ/"
+      }
+    ]
+  },
+  {
+    "term": "登神之路",
+    "aliases": ["登神长阶"],
+    "meaning": "对桃纸“一路进阶封神”叙事的夸张说法：官方投稿用“登神之路”记录星布谷地首个五冠王，粉丝切片用“登神长阶”形容唱《耀斑》被众主播围观的名场面。",
+    "subject": "社区造词",
+    "confidence": "高",
+    "boundary": "是社区叙事修辞，不是官方荣誉或排名；两处用法分别绑定五冠王与歌回语境，不宜泛化成日常夸人用语。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方投稿：见证星布谷地首个“头部主播”五冠王的登神之路",
+        "url": "https://www.bilibili.com/video/BV1zhCTB4Ene/"
+      },
+      {
+        "title": "粉丝切片：众主播看桃纸哟登神长阶《耀斑》",
+        "url": "https://www.bilibili.com/video/BV12B6GBjE6y/"
+      }
+    ]
+  },
+  {
+    "term": "纯萌新",
+    "aliases": ["2026还有纯萌新"],
+    "meaning": "桃纸 2026 年入坑崩坏：星穹铁道、绝区零等游戏时的自我定位；官方录播标题句式“2026 还有纯萌新？”，强调真的没玩过、从 1.0 剧情开始看。",
+    "subject": "主播状态",
+    "confidence": "高",
+    "boundary": "只适用于她新入坑的游戏；她在星露谷物语等老本行是 1300h+ 的老玩家，不能笼统叫萌新。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播：【崩铁】2026还有纯萌新？发车！先看开服前瞻",
+        "url": "https://www.bilibili.com/video/BV18Egv6VEjy/"
+      },
+      {
+        "title": "官方录播：【原神】2026年还有纯萌新？看2025原神生日会",
+        "url": "https://www.bilibili.com/video/BV1uNG86vEde/"
+      }
+    ]
+  },
+  {
+    "term": "甜桃王朝",
+    "aliases": [],
+    "meaning": "“X 桃王朝”造词模板在歌回场景的用例，官方录播章节“甜桃王朝了！《爱啦啦》”，形容唱歌甜到上头的高情绪状态。",
+    "subject": "主播状态",
+    "confidence": "中",
+    "boundary": "单场歌回章节用法，与“黄桃王朝”同源；不是正式阵营或固定称号。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播章节：久违的演唱会分 P15“甜桃王朝了！《爱啦啦》”",
+        "url": "https://www.bilibili.com/video/BV1dcKK6tEMK/"
+      }
+    ]
+  },
+  {
+    "term": "桃喆",
+    "aliases": [],
+    "meaning": "歌回唱陶喆歌曲（如《爱我还是他》）时的谐音称呼，出自官方演唱会录播章节。",
+    "subject": "主播状态",
+    "confidence": "中",
+    "boundary": "单场演唱会章节用例，仅指演唱场合；与陶喆本人无关，不表示任何官方关联。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播章节：久违的演唱会分 P3（陶喆曲目）",
+        "url": "https://www.bilibili.com/video/BV1dcKK6tEMK/"
+      }
+    ]
+  },
+  {
+    "term": "Rap桃",
+    "aliases": ["Rap 桃"],
+    "meaning": "歌回唱说唱歌曲（如《上学威龙》）时的称呼，出自官方演唱会录播章节。",
+    "subject": "主播状态",
+    "confidence": "中",
+    "boundary": "单场演唱会章节用例，仅指演唱场合的临时称呼。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播章节：久违的演唱会分 P12（说唱曲目）",
+        "url": "https://www.bilibili.com/video/BV1dcKK6tEMK/"
+      }
+    ]
+  },
+  {
+    "term": "突然的桃播",
+    "aliases": [],
+    "meaning": "粉丝创作的歌曲名，官方录播出现“《突然的桃播》怀旧金曲首放送”与“听粉丝曲《突然的桃播》”章节，名字化用“突然的直播”与“桃播”。",
+    "subject": "社区造词",
+    "confidence": "中",
+    "boundary": "是粉丝作品名，不是直播固定栏目；引用时应标注二创属性。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播章节：《突然的桃播》怀旧金曲首放送",
+        "url": "https://www.bilibili.com/video/BV1oGTC6BEba/"
+      },
+      {
+        "title": "官方录播章节：听粉丝曲《突然的桃播》",
+        "url": "https://www.bilibili.com/video/BV1RfC6BjEYB/"
+      }
+    ]
+  },
+  {
+    "term": "嚎桃",
+    "aliases": ["嚎桃警告"],
+    "meaning": "“嚎啕大哭”的桃系谐音，抽卡翻车或剧情受打击时的夸张表达，官方录播有“嚎桃警告”“嚎桃大哭警告”章节用例。",
+    "subject": "主播状态",
+    "confidence": "中",
+    "boundary": "情绪夸张修辞，用于娱乐语境，不描述真实心理状态。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播章节：接火神大人回家分 P1“嚎桃警告”",
+        "url": "https://www.bilibili.com/video/BV1QtE76QEXW/"
+      },
+      {
+        "title": "官方录播章节：抽尼可和杜林分 P6“嚎桃大哭警告”",
+        "url": "https://www.bilibili.com/video/BV19BLU6vEnT/"
+      }
+    ]
+  },
+  {
+    "term": "公式桃",
+    "aliases": [],
+    "meaning": "形容操作或打法像固定公式一样稳定复现的自嘲或夸奖，官方录播章节有“公式桃依旧权威”“正反手公式桃”。",
+    "subject": "主播状态",
+    "confidence": "中",
+    "boundary": "操作风格梗，不是技术评级；具体“公式”指什么随游戏与场景变化。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播章节：月之一 Day5 分 P5/P7“公式桃依旧权威”",
+        "url": "https://www.bilibili.com/video/BV1V6Lz6VE6H/"
+      }
+    ]
+  },
+  {
+    "term": "软桃派",
+    "aliases": ["硬桃派"],
+    "meaning": "玩法或立场选择的派系对举，水友按软、硬两种风格站队，出自官方录播章节。",
+    "subject": "水友立场",
+    "confidence": "中",
+    "boundary": "单章节用例，软、硬具体指什么随场景变化，不应当成固定阵营划分。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播章节：终北祷歌集分 P8“软桃派/硬桃派”",
+        "url": "https://www.bilibili.com/video/BV1mtLP6eEBk/"
+      }
+    ]
+  },
+  {
+    "term": "黑桃猫猫",
+    "aliases": [],
+    "meaning": "黑桃与猫猫的组合称呼，用于剧情互动场景的官方录播章节标题。",
+    "subject": "社区造词",
+    "confidence": "中",
+    "boundary": "单章节用例，具体所指随剧情变化，不宜脱离语境使用。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播章节：月之三主线分 P2“黑桃猫猫”",
+        "url": "https://www.bilibili.com/video/BV1iq7k6fE6V/"
+      }
+    ]
+  },
+  {
+    "term": "夹竹桃",
+    "aliases": ["夹竹桃上线"],
+    "meaning": "桃纸用“夹子音”唱歌或说话时的状态称呼（夹＋桃），切片标题有“夹竹桃上线”“夹竹桃声线玩欺诈电话”等用例。",
+    "subject": "主播状态",
+    "confidence": "中",
+    "boundary": "指发声风格的玩笑梗，不是对声音的评价；注意与植物夹竹桃无关。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "粉丝切片：桃纸封神力作《不分手的恋爱》，夹竹桃上线",
+        "url": "https://www.bilibili.com/video/BV1ANSfBZEET/"
+      },
+      {
+        "title": "粉丝切片：桃纸联动猫窝，夹竹桃声线玩欺诈电话",
+        "url": "https://www.bilibili.com/video/BV1J4w3zHELj/"
+      }
+    ]
+  },
+  {
+    "term": "黄桃大将军",
+    "aliases": [],
+    "meaning": "黄桃阵营的领袖式口号称呼，切片与录播字幕有“重铸黄桃荣光，我黄桃大将军义不容辞”“黄桃大将军四连不歪”等用法。",
+    "subject": "水友立场",
+    "confidence": "中",
+    "boundary": "阵营玩梗口号，不是正式头衔；多绑定抽卡与审美语境。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "粉丝切片：【黄桃大将军】杉树 TO THE MOON 嗦面合集",
+        "url": "https://www.bilibili.com/video/BV1CBP1zZEgD/"
+      },
+      {
+        "title": "官方录播：兹白龙王卡池代抽字幕“我黄桃大将军义不容辞”",
+        "url": "https://www.bilibili.com/video/BV19uFjzHEdB/"
+      }
+    ]
+  },
+  {
+    "term": "今日桃李运势",
+    "aliases": ["桃李运势"],
+    "meaning": "直播中的每日运势播报环节，配套梗是“关注桃神影响运势”，如“自从关注桃神运势就不加了”。",
+    "subject": "社区造词",
+    "confidence": "中",
+    "boundary": "属娱乐环节，不是真实占卜或预测；与本插件的“今日桃签”一样是玩笑性质。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播：兹白龙王卡池代抽分 P3 字幕“今日桃李运势”",
+        "url": "https://www.bilibili.com/video/BV19uFjzHEdB/"
+      }
+    ]
+  },
+  {
+    "term": "桃神十曲",
+    "aliases": [],
+    "meaning": "“桃纸十大金曲”的传说式说法，如“自古流传着桃神十曲的传说”，可看作桃莱美体系的扩展。",
+    "subject": "社区造词",
+    "confidence": "中",
+    "boundary": "曲目名单并未正式固定，属于社区叙事修辞。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "粉丝切片：二相乐园自古流传着桃神十曲的传说",
+        "url": "https://www.bilibili.com/video/BV14fcEzUEsE/"
+      }
+    ]
+  },
+  {
+    "term": "桃莱AI美",
+    "aliases": [],
+    "meaning": "AI 合成桃纸声线演唱的“桃莱美”特别篇称呼（桃莱美＋AI），有生日特别篇切片。",
+    "subject": "社区造词",
+    "confidence": "中",
+    "boundary": "属 AI 生成内容，不等于本人演唱，也不意味着声音使用获得授权。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "粉丝切片：桃莱AI美生日特别篇",
+        "url": "https://www.bilibili.com/video/BV1fnRTBWEdV/"
+      }
+    ]
+  },
+  {
+    "term": "蒙古包小区",
+    "aliases": ["蒙古包"],
+    "meaning": "主播联动聊出的梗：桃纸住处被戏称为“蒙古包小区”，衍生“真住蒙古包吗”“出门是不是都骑马”等草原人设调侃。",
+    "subject": "社区造词",
+    "confidence": "中",
+    "boundary": "水友玩梗而非真实居住信息，不能用于推断主播住址或任何隐私。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "粉丝切片：自由魂看桃纸住的小区，真是蒙古包小区啊",
+        "url": "https://www.bilibili.com/video/BV1oKP1zSEBo/"
+      },
+      {
+        "title": "粉丝切片：蒙古包小区网不好，出门是不是都骑马",
+        "url": "https://www.bilibili.com/video/BV1rrP1zdEJt/"
+      }
+    ]
+  },
+  {
+    "term": "桃神牛肉干",
+    "aliases": ["蒙古包正宗牛肉干"],
+    "meaning": "桃纸直播安利的牛肉干被水友买爆、店家误以为恶意刷单并主动找上门的事件梗，衍生“放牛卖牛肉干、给牛唱歌”的弹幕玩笑。",
+    "subject": "社区造词",
+    "confidence": "中",
+    "boundary": "桃纸没有自己的牛肉干品牌；玩梗不等于带货合作或商业授权。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "粉丝切片：桃神的蒙古包正宗牛肉干太美味了",
+        "url": "https://www.bilibili.com/video/BV1fPKY6gEdK/"
+      },
+      {
+        "title": "粉丝切片：桃纸聊牛肉干店直接被卖爆，店家以为是恶意刷单",
+        "url": "https://www.bilibili.com/video/BV1qKgq6FErd/"
+      }
+    ]
+  },
+  {
+    "term": "双桃狂喜",
+    "aliases": [],
+    "meaning": "仿“双厨狂喜”：崩铁角色昔涟与桃纸同框时“昔涟是桃，桃纸是桃”的谐音造词。",
+    "subject": "社区造词",
+    "confidence": "中",
+    "boundary": "单切片造词，是谐音玩笑而非官方设定。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "粉丝切片：桃纸鉴赏昔涟，昔涟是桃，桃纸是桃，双桃狂喜",
+        "url": "https://www.bilibili.com/video/BV1PgkJBiECb/"
+      }
+    ]
+  },
+  {
+    "term": "巴桃有别",
+    "aliases": [],
+    "meaning": "桃纸夸主播圈好友“巴老师”唱歌好听时的造句“真是巴桃有别啊”，自嘲两人歌力差距。",
+    "subject": "社区造词",
+    "confidence": "中",
+    "boundary": "联动语境的玩笑自谦，不是对任何一方的贬低；巴老师是联动对象而非桃纸本人。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "粉丝切片：巴老师唱歌好好听，真是巴桃有别啊",
+        "url": "https://www.bilibili.com/video/BV12F6GBGEFF/"
+      }
+    ]
+  },
+  {
+    "term": "小小桃是块砖",
+    "aliases": [],
+    "meaning": "仿“革命战士是块砖，哪里需要哪里搬”：桃纸看崩铁剧情时自嘲是被将军呼来喝去的奇兵。",
+    "subject": "社区造词",
+    "confidence": "中",
+    "boundary": "单场剧情语境的自嘲句式，不是稳定称呼。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "粉丝切片：原来我就是将军的奇兵，小小桃是块砖是吧",
+        "url": "https://www.bilibili.com/video/BV1gY3P64Eef/"
+      }
+    ]
+  },
+  {
+    "term": "A0翻车第一人",
+    "aliases": [],
+    "meaning": "初体验崩铁货币战争 A0 层级副本翻车后被切片封为“A0 翻车第一人”。",
+    "subject": "主播状态",
+    "confidence": "中",
+    "boundary": "A0 是版本活动关卡层级，属事件性梗；需要货币战争版本语境才能理解。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "粉丝切片：满级萌新勇闯A0副本，A0翻车第一人",
+        "url": "https://www.bilibili.com/video/BV1gDTg6eEsB/"
+      }
+    ]
+  },
+  {
+    "term": "小黄鸭教",
+    "aliases": [],
+    "meaning": "粉丝自组织的玩笑“教派”，有“桃子成功加入小黄鸭教”切片。",
+    "subject": "社区造词",
+    "confidence": "中",
+    "boundary": "粉丝玩笑组织，与现实宗教无关，也没有实际成员制度。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "粉丝切片：桃子成功加入小黄鸭教",
+        "url": "https://www.bilibili.com/video/BV1CCUXBCEnh/"
+      }
+    ]
+  },
+  {
+    "term": "币战桃神",
+    "aliases": [],
+    "meaning": "币战打得好时的“桃神”变体，如新手第二把就三星五费的切片标题。",
+    "subject": "社区造词",
+    "confidence": "中",
+    "boundary": "单场战绩语境的夸张称呼，不是稳定称号。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "粉丝切片：币战新手桃神第二把就三星昔涟加三星五费狼尊",
+        "url": "https://www.bilibili.com/video/BV1WJTg6REzw/"
+      }
+    ]
+  },
+  {
+    "term": "桃红温",
+    "aliases": [],
+    "meaning": "“红温”（急眼、上头）的桃系化用，切片标题有“桃求饶 桃红温 桃反击 桃劣势 桃得吃”的连续造词。",
+    "subject": "主播状态",
+    "confidence": "中",
+    "boundary": "切片标题造词，非稳定称呼；描述的是娱乐化的上头状态。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "粉丝切片：桃求饶 桃红温 桃反击 桃劣势 桃得吃",
+        "url": "https://www.bilibili.com/video/BV1c3gr6VEMt/"
+      }
+    ]
+  },
+  {
+    "term": "大鹅运蛋",
+    "aliases": [],
+    "meaning": "与师父联机玩《An Eggstremely Hard Game》（大鹅运蛋）的系列章节称呼。",
+    "subject": "社区造词",
+    "confidence": "中",
+    "boundary": "指联机游戏内容，不是游戏官方译名；绑定师徒联机语境。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播章节：和师父玩大鹅运蛋",
+        "url": "https://www.bilibili.com/video/BV1373n6rE4H/"
+      }
+    ]
+  },
+  {
+    "term": "桃声按摩大脑",
+    "aliases": [],
+    "meaning": "粉丝对桃纸治愈系歌声的命名，有“桃声按摩大脑一分钟纯享（佩戴耳机更佳）”切片。",
+    "subject": "社区造词",
+    "confidence": "中",
+    "boundary": "粉丝二创命名，不是官方栏目；引用时标注二创属性。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "粉丝切片：桃纸桃声按摩大脑一分钟纯享",
+        "url": "https://www.bilibili.com/video/BV1YpcKzREgX/"
+      }
+    ]
+  },
+  {
+    "term": "小桃丝",
+    "aliases": ["小小丝"],
+    "meaning": "粉丝的自称之一，抽卡录播字幕中有“全是小小丝黄桃王朝队”的用法。",
+    "subject": "水友立场",
+    "confidence": "中",
+    "boundary": "单语境用法；粉丝还有“桃区”“徒弟”等其他自称，不是唯一官方称呼。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播：兹白龙王卡池代抽分 P2 字幕“全是小小丝黄桃王朝队”",
+        "url": "https://www.bilibili.com/video/BV19uFjzHEdB/"
+      }
+    ]
+  },
+  {
+    "term": "快桃",
+    "aliases": [],
+    "meaning": "切片标题“快桃 夹竹桃来了”中出现的临时词，疑为“快逃”的谐音或“快来”的意思。",
+    "subject": "含义待核实",
+    "confidence": "低",
+    "boundary": "仅一例且评论区无解释，含义未确认，不建议脱离原语境使用。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "粉丝切片：桃纸教你做饼干 快桃 夹竹桃来了",
+        "url": "https://www.bilibili.com/video/BV1imR7B1Egm/"
+      }
+    ]
+  },
+  {
+    "term": "桃饱",
+    "aliases": [],
+    "meaning": "丝之歌系列官方录播章节中的称呼（如“桃饱打败末代裁决者”），可能是“桃＋宝/包”的昵称谐音。",
+    "subject": "含义待核实",
+    "confidence": "低",
+    "boundary": "词义未确认，仅章节标题单例；不排除录播整理方的临时写法。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播章节：【丝之歌】Day5 桃饱打败末代裁决者",
+        "url": "https://www.bilibili.com/video/BV19MNs6rESp/"
+      }
+    ]
+  },
+  {
+    "term": "桃头",
+    "aliases": [],
+    "meaning": "官方录播章节“桃头变成了……嘟嘟可？”中的说法，疑与皮套、形象有关。",
+    "subject": "含义待核实",
+    "confidence": "低",
+    "boundary": "词义未确认，仅章节标题单例；需回到录播原片核对。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播章节：桃头变成了嘟嘟可？",
+        "url": "https://www.bilibili.com/video/BV1xt756wE5b/"
       }
     ]
   }
