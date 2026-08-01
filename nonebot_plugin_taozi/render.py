@@ -277,7 +277,8 @@ def _qr_image(url: str) -> skia.Image | None:
     pil_image = qr.make_image(fill_color=COLOR_TEXT, back_color="white").convert("RGB")
     buffer = io.BytesIO()
     pil_image.save(buffer, format="PNG")
-    return skia.Image.MakeFromEncoded(buffer.getvalue())
+    # MakeWithCopy：MakeFromEncoded 零拷贝不持有数据，防止临时 buffer 被 GC 后悬垂
+    return skia.Image.MakeFromEncoded(skia.Data.MakeWithCopy(buffer.getvalue()))
 
 
 def _load_character_image() -> skia.Image | None:
@@ -287,7 +288,8 @@ def _load_character_image() -> skia.Image | None:
 
     _CHARACTER_IMAGE_LOADED = True
     try:
-        _CHARACTER_IMAGE = skia.Image.MakeFromEncoded(_CHARACTER_PATH.read_bytes())
+        # MakeWithCopy：MakeFromEncoded 零拷贝不持有数据，read_bytes 临时对象被 GC 后悬垂
+        _CHARACTER_IMAGE = skia.Image.MakeFromEncoded(skia.Data.MakeWithCopy(_CHARACTER_PATH.read_bytes()))
     except Exception:
         logger.exception("[taozi] 角色背景素材加载失败")
     return _CHARACTER_IMAGE
