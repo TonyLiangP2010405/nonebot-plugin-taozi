@@ -3,6 +3,7 @@ from io import BytesIO
 import pytest
 from PIL import Image
 
+from nonebot_plugin_taozi import render
 from nonebot_plugin_taozi.fortune import FORTUNES
 from nonebot_plugin_taozi.lexicon import BUILTIN_LEXICON
 from nonebot_plugin_taozi.render import (
@@ -42,8 +43,37 @@ async def test_lexicon_card_is_png_with_dynamic_height() -> None:
 
 @pytest.mark.asyncio
 async def test_fortune_card_is_png() -> None:
-    data = await render_fortune_card(FORTUNES[0], "2026-07-30")
+    data = await render_fortune_card(
+        FORTUNES[0],
+        "2026-07-30",
+        "测试桃",
+        "10001",
+    )
     assert_valid_png(data)
+
+
+@pytest.mark.asyncio
+async def test_fortune_card_has_explicit_owner_section(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    captured: list[render.CardSpec] = []
+
+    def capture_spec(spec: render.CardSpec) -> bytes:
+        captured.append(spec)
+        return b"rendered"
+
+    monkeypatch.setattr(render, "_render_card_sync", capture_spec)
+    data = await render.render_fortune_card(
+        FORTUNES[0],
+        "2026-07-31",
+        "群名片桃",
+        "10001",
+    )
+
+    assert data == b"rendered"
+    assert captured[0].subtitle == "今日桃签 · 2026-07-31"
+    assert captured[0].sections[0].label == "桃签主人"
+    assert captured[0].sections[0].body == "群名片桃（账号 10001）"
 
 
 @pytest.mark.asyncio

@@ -495,13 +495,21 @@ async def render_lexicon_card(
     return await asyncio.to_thread(_render_card_sync, spec)
 
 
-async def render_fortune_card(fortune: Fortune, day: str) -> bytes:
+async def render_fortune_card(
+    fortune: Fortune,
+    day: str,
+    owner_name: str,
+    owner_id: str,
+) -> bytes:
     spec = CardSpec(
         title=fortune.name,
         subtitle=f"今日桃签 · {day}",
         chips=(f"关键词 {fortune.keyword}", "仅供娱乐"),
-        sections=(CardSection("今日提示", fortune.message),),
-        footer="互动文案不是主播原话；同一用户当天结果保持一致。",
+        sections=(
+            CardSection("桃签主人", f"{owner_name}（账号 {owner_id}）"),
+            CardSection("今日提示", fortune.message),
+        ),
+        footer="互动文案不是主播原话；同一账号当天固定，次日重新抽取。",
     )
     return await asyncio.to_thread(_render_card_sync, spec)
 

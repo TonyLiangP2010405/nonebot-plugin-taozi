@@ -36,16 +36,26 @@ self_color = on_command(
 cancel_color = on_command("取消桃色", priority=10, block=True)
 
 
+def get_fortune_owner_name(event: MessageEvent) -> str:
+    raw_name = event.sender.card or event.sender.nickname or "用户"
+    normalized = " ".join(raw_name.split()) or "用户"
+    return f"{normalized[:13]}…" if len(normalized) > 14 else normalized
+
+
 @daily_fortune.handle()
 async def handle_daily_fortune(event: MessageEvent) -> None:
     await require_fun(daily_fortune, event, command_key="daily_fortune")
     day = get_today()
-    fortune = pick_daily_fortune(event.get_user_id(), day)
+    owner_id = event.get_user_id()
+    owner_name = get_fortune_owner_name(event)
+    fortune = pick_daily_fortune(owner_id, day)
     await finish_fortune_card(
         daily_fortune,
         fortune,
         day.isoformat(),
-        render_fortune(fortune),
+        owner_name,
+        owner_id,
+        render_fortune(fortune, owner_name, owner_id),
     )
 
 

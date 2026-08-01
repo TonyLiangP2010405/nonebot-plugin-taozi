@@ -1,3 +1,4 @@
+from datetime import date
 from pathlib import Path
 from time import time
 
@@ -16,12 +17,23 @@ from nonebug import App
 from nonebot_plugin_taozi import output
 from nonebot_plugin_taozi.commands import fun, settings
 from nonebot_plugin_taozi.commands.lexicon import lexicon_command
+from nonebot_plugin_taozi.fortune import pick_daily_fortune
 from nonebot_plugin_taozi.lexicon import BUILTIN_LEXICON, render_entry
-from nonebot_plugin_taozi.render import render_lexicon_card, render_message_card
+from nonebot_plugin_taozi.render import (
+    render_fortune_card,
+    render_lexicon_card,
+    render_message_card,
+)
 from nonebot_plugin_taozi.state import TaoziStateStore
 
 
-def make_group_event(message: str, *, role: str = "member") -> GroupMessageEvent:
+def make_group_event(
+    message: str,
+    *,
+    role: str = "member",
+    nickname: str = "tester",
+    card: str | None = None,
+) -> GroupMessageEvent:
     parsed = Message(message)
     return GroupMessageEvent(
         time=int(time()),
@@ -35,7 +47,12 @@ def make_group_event(message: str, *, role: str = "member") -> GroupMessageEvent
         original_message=parsed,
         raw_message=message,
         font=0,
-        sender=Sender(user_id=10001, nickname="tester", role=role),
+        sender=Sender(
+            user_id=10001,
+            nickname=nickname,
+            card=card,
+            role=role,
+        ),
         to_me=True,
         group_id=20001,
     )
@@ -73,6 +90,45 @@ async def test_daily_fortune_does_not_require_or_accept_command_prefix() -> None
         make_group_event("/今日桃签"),
         {},
     )
+
+
+def test_daily_fortune_owner_prefers_group_card_and_limits_length() -> None:
+    event = make_group_event(
+        "今日桃签",
+        nickname="昵称桃",
+        card="  很长很长很长很长很长很长很长很长的群名片  ",
+    )
+
+    assert fun.get_fortune_owner_name(event) == "很长很长很长很长很长很长很…"
+
+
+@pytest.mark.asyncio
+async def test_daily_fortune_card_identifies_owner(
+    app: App,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    async def allow_fun(*args, **kwargs) -> None:
+        return None
+
+    fixed_day = date(2026, 7, 31)
+    monkeypatch.setattr(fun, "require_fun", allow_fun)
+    monkeypatch.setattr(fun, "get_today", lambda: fixed_day)
+    fortune = pick_daily_fortune("10001", fixed_day)
+    expected = MessageSegment.image(
+        await render_fortune_card(
+            fortune,
+            fixed_day.isoformat(),
+            "群名片桃",
+            "10001",
+        )
+    )
+
+    async with app.test_matcher(fun.daily_fortune) as ctx:
+        bot = create_onebot(ctx)
+        event = make_group_event("今日桃签", nickname="昵称桃", card="群名片桃")
+        ctx.receive_event(bot, event)
+        ctx.should_call_send(event, expected, result=None, bot=bot)
+        ctx.should_finished()
 
 
 @pytest.mark.asyncio
