@@ -1,6 +1,6 @@
 [project]
 name = "nonebot-plugin-taozi"
-version = "0.3.0"
+version = "0.4.0"
 description = "图片化的有出处桃系词典与可选轻互动 NoneBot2 插件"
 authors = [{ name = "TonyLiangP2010405" }]
 license = "MIT"

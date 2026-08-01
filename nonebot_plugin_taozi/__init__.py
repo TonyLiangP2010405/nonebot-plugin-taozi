@@ -12,7 +12,7 @@ __plugin_meta__ = PluginMetadata(
     description="图片化的有出处桃系词典与可选轻互动",
     usage=(
         "桃系词典 [词条]｜随机桃词｜今日桃签｜我的桃色 [桃色/取消]｜"
-        "桃趣状态｜桃趣 开启/关闭"
+        "群桃图鉴｜桃趣状态｜桃趣 开启/关闭"
     ),
     type="application",
     homepage="https://github.com/TonyLiangP2010405/nonebot-plugin-taozi",

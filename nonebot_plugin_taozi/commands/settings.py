@@ -1,16 +1,16 @@
-from nonebot import on_command
-from nonebot.adapters.onebot.v11 import GroupMessageEvent, Message, MessageEvent
+from nonebot import on_fullmatch, on_regex
+from nonebot.adapters.onebot.v11 import GroupMessageEvent, MessageEvent
 from nonebot.adapters.onebot.v11.permission import GROUP_ADMIN, GROUP_OWNER
-from nonebot.params import CommandArg
+from nonebot.params import RegexStr
 from nonebot.permission import SUPERUSER
 
 from ..config import plugin_config
 from ..output import finish_message_card
 from .common import get_group_id, is_fun_enabled, state_store
 
-fun_status = on_command("桃趣状态", priority=10, block=True)
-fun_settings = on_command(
-    "桃趣",
+fun_status = on_fullmatch("桃趣状态", priority=10, block=True)
+fun_settings = on_regex(
+    r"^桃趣(?:\s+(?P<action>.+?))?\s*$",
     permission=SUPERUSER | GROUP_ADMIN | GROUP_OWNER,
     priority=10,
     block=True,
@@ -34,7 +34,10 @@ async def handle_fun_status(event: MessageEvent) -> None:
 
 
 @fun_settings.handle()
-async def handle_fun_settings(event: MessageEvent, args: Message = CommandArg()) -> None:
+async def handle_fun_settings(
+    event: MessageEvent,
+    action: str | None = RegexStr("action"),
+) -> None:
     if not isinstance(event, GroupMessageEvent):
         await finish_message_card(
             fun_settings,
@@ -42,7 +45,7 @@ async def handle_fun_settings(event: MessageEvent, args: Message = CommandArg())
             "桃趣开关只能在群聊中设置。",
         )
 
-    action = args.extract_plain_text().strip()
+    action = (action or "").strip()
     group_id = get_group_id(event)
     if group_id is None:
         await finish_message_card(
@@ -93,6 +96,6 @@ async def handle_fun_settings(event: MessageEvent, args: Message = CommandArg())
     await finish_message_card(
         fun_settings,
         "桃趣设置",
-        "用法：/桃趣 开启｜/桃趣 关闭｜/桃趣 状态",
+        "用法：桃趣 开启｜桃趣 关闭｜桃趣 状态",
         chips=("仅群管理可用",),
     )

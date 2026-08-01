@@ -1,61 +1,61 @@
 [
   {
     "term": "黑桃",
-    "aliases": ["黑粉桃"],
-    "meaning": "“黑粉”的谐称，常指在联机游戏或直播互动中故意捉弄、围攻、拆台主播的对抗型水友或舰长。",
+    "aliases": ["黑粉桃", "最大黑桃"],
+    "meaning": "“黑粉”的谐称，常指在联机、抽卡或直播互动中故意捉弄、唱反调、拆台主播的对抗型水友或熟人。",
     "subject": "水友立场",
     "confidence": "高",
-    "boundary": "整体多为熟人式玩笑，不等同于恶意攻击者；也不应由机器人未经本人同意自动给群友贴标签。",
-    "verified_at": "2026-07-30",
+    "boundary": "整体多为熟人式玩笑，不等同于恶意攻击者；抽卡翻车只是产生黑桃剧情的一种场景，机器人也不应未经本人同意给群友贴这个标签。",
+    "verified_at": "2026-08-01",
     "sources": [
       {
-        "title": "录播原片：“最大的黑桃”与“直播间的黑桃”语境",
+        "title": "官方录播：“最大的黑桃”与“直播间的黑桃”语境",
         "url": "https://www.bilibili.com/video/BV17vDaBjE3a/",
         "note": "主播把妈妈称为最大的黑桃，并与直播间的黑桃比较。"
       },
       {
-        "title": "录播：“代抽造就黑桃”语境",
-        "url": "https://www.bilibili.com/video/BV179DJB1E5Z/",
-        "note": "代抽翻车是支持者转为玩笑式黑粉的剧情语境，不是词语核心定义。"
+        "title": "官方录播章节：“代抽造就黑桃”",
+        "url": "https://www.bilibili.com/video/BV1t9qPBpEZt/",
+        "note": "代抽翻车把支持者变成玩笑式黑粉，说明黑桃的核心是互动立场而非单纯运气。"
       }
     ]
   },
   {
     "term": "白桃",
-    "aliases": [],
-    "meaning": "常作为与黑桃相对的支持型、正向水友称呼；部分语境同时带有“白”或“欧”的正向运气联想。",
+    "aliases": ["白桃会赢嘛"],
+    "meaning": "常作为与黑桃相对的支持型、正向水友称呼；在抽卡语境中也会带有“白、欧、顺利”的好运联想。",
     "subject": "水友立场",
     "confidence": "中",
-    "boundary": "公开样本能够确认其与黑桃并列并用于水友互动，但尚未找到主播给出的正式、稳定定义。",
-    "verified_at": "2026-07-30",
+    "boundary": "公开样本能够确认其与黑桃对举并用于水友或抽卡互动，但尚未找到主播给出的唯一正式定义。",
+    "verified_at": "2026-08-01",
     "sources": [
       {
         "title": "粉丝切片：白桃、黑桃、红桃、黄桃四选一",
         "url": "https://www.bilibili.com/video/BV1KhdUBQE8L/"
       },
       {
-        "title": "录播：白桃、黄桃等抽卡语境",
-        "url": "https://www.bilibili.com/video/BV19uFjzHEdB/"
+        "title": "官方录播章节：“白桃应有尽有”“白桃会赢嘛”",
+        "url": "https://www.bilibili.com/video/BV1eGcPz9EeF/"
       }
     ]
   },
   {
     "term": "黄桃",
-    "aliases": ["黄桃王朝"],
-    "meaning": "面对喜欢或有魅力的角色时，进入高情绪的审美或偏好表达状态。",
+    "aliases": ["黄桃王朝", "本质黄桃"],
+    "meaning": "面对喜欢或有魅力的角色时，进入高情绪的审美、夸赞或偏好表达状态。",
     "subject": "主播状态",
     "confidence": "高",
-    "boundary": "这是社区结合具体直播场景形成的称呼，不应被扩写成固定人格或脱离出处的私生活判断。",
-    "verified_at": "2026-07-30",
+    "boundary": "这是围绕公开内容形成的审美反应梗，不应被扩写成固定人格，更不能被用于推断主播私生活。",
+    "verified_at": "2026-08-01",
     "sources": [
       {
-        "title": "粉丝切片：白桃、黑桃、红桃、黄桃四选一",
-        "url": "https://www.bilibili.com/video/BV1KhdUBQE8L/",
-        "note": "切片标题与互动中出现“黄桃王朝”。"
+        "title": "官方投稿：法尔伽细节与“黄桃王朝”说明",
+        "url": "https://www.bilibili.com/video/BV1oRfqBjEmR/",
+        "note": "投稿简介直接使用“黄桃王朝了”。"
       },
       {
-        "title": "录播：白桃、黄桃等抽卡语境",
-        "url": "https://www.bilibili.com/video/BV19uFjzHEdB/"
+        "title": "粉丝切片：四色桃选择与“黄桃王朝”",
+        "url": "https://www.bilibili.com/video/BV1KhdUBQE8L/"
       }
     ]
   },
@@ -65,8 +65,8 @@
     "meaning": "已确认属于白桃、黑桃、红桃、黄桃的四色并列称呼之一。",
     "subject": "含义待核实",
     "confidence": "低",
-    "boundary": "公开样本不足以稳定判断触发语境；不把“害羞”“激动”或“红温”等联想写成事实。",
-    "verified_at": "2026-07-30",
+    "boundary": "公开样本不足以稳定判断触发语境；不把“害羞”“激动”“红温”或其他颜色联想写成事实。",
+    "verified_at": "2026-08-01",
     "sources": [
       {
         "title": "粉丝切片：白桃、黑桃、红桃、黄桃四选一",
@@ -75,47 +75,516 @@
     ]
   },
   {
-    "term": "学霸桃",
-    "aliases": [],
-    "meaning": "录播标题在具体小故事语境中使用的临时“X 桃”称呼。",
+    "term": "桃纸",
+    "aliases": ["桃子", "小桃", "小小桃"],
+    "meaning": "对主播“小小桃纸哟”的常用简称，也是许多“桃系”谐音造词的词根。",
     "subject": "社区造词",
-    "confidence": "中",
-    "boundary": "目前只能确认代表性用例，不能据此认定它具有长期统一的词典定义。",
-    "verified_at": "2026-07-30",
+    "confidence": "高",
+    "boundary": "只用于公开账号与内容语境，不代表其他名字里带“桃”的主播或普通用户。",
+    "verified_at": "2026-08-01",
     "sources": [
       {
-        "title": "录播：“学霸桃小故事”语境",
-        "url": "https://www.bilibili.com/video/BV1EWDqBFEc2/"
+        "title": "小小桃纸哟 B站主账号",
+        "url": "https://space.bilibili.com/6867955/"
+      }
+    ]
+  },
+  {
+    "term": "桃神",
+    "aliases": ["桃神神了"],
+    "meaning": "粉丝在高光、学习很快或反差感很强的场景中使用的夸张称呼。",
+    "subject": "社区造词",
+    "confidence": "高",
+    "boundary": "属于娱乐化赞称，不是官方身份、能力认证或现实宗教称谓。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方投稿：教悟性 S+ 萌新首次打满深渊",
+        "url": "https://www.bilibili.com/video/BV1x2ZZBJErn/",
+        "note": "投稿简介使用“桃神神了”。"
+      },
+      {
+        "title": "官方原神开荒录播合集",
+        "url": "https://www.bilibili.com/video/BV1RfC6BjEYB/"
+      }
+    ]
+  },
+  {
+    "term": "第八神桃神",
+    "aliases": ["第八神"],
+    "meaning": "原神萌新开荒阶段围绕“桃神分析七神、成为第八神”形成的夸张节目效果。",
+    "subject": "社区造词",
+    "confidence": "高",
+    "boundary": "它是原神直播语境的玩笑头衔，不是游戏官方设定，也不应脱离对应系列使用。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方原神开荒录播章节：“第八神桃神分析PV”",
+        "url": "https://www.bilibili.com/video/BV1RfC6BjEYB/"
+      },
+      {
+        "title": "切片合集：桃神成为第八神宣言",
+        "url": "https://www.bilibili.com/video/BV1r7iZBXESX/"
+      }
+    ]
+  },
+  {
+    "term": "头部主播",
+    "aliases": ["星布谷地头部主播"],
+    "meaning": "星布谷地测试期围绕直播成绩与节目效果形成的自嘲式身份标签，标题常带引号。",
+    "subject": "社区造词",
+    "confidence": "高",
+    "boundary": "不应把它解释为平台正式排名、行业认证或可验证的全站第一。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方直播回放：星布谷地“头部”主播冲击六冠王",
+        "url": "https://www.bilibili.com/video/BV1bKkyBLEQx/"
+      }
+    ]
+  },
+  {
+    "term": "五冠王",
+    "aliases": [],
+    "meaning": "星布谷地测试期已经取得五项相关成果时使用的阶段性荣誉梗。",
+    "subject": "社区造词",
+    "confidence": "高",
+    "boundary": "属于游戏测试期的直播叙事，不是职业赛事头衔；随后又出现六冠王阶段。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方投稿列表章节：星布谷地“头部”主播五冠王的日常",
+        "url": "https://www.bilibili.com/list/6867955?bvid=BV1RfC6BjEYB"
+      }
+    ]
+  },
+  {
+    "term": "六冠王",
+    "aliases": ["星布谷地六冠王"],
+    "meaning": "星布谷地测试期完成六项代表性成果后形成的社区荣誉与直播叙事标签。",
+    "subject": "社区造词",
+    "confidence": "高",
+    "boundary": "它不是官方职业赛事冠军，也不表示其他游戏中的竞技水平。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方直播回放：冲击六冠王的一天",
+        "url": "https://www.bilibili.com/video/BV1bKkyBLEQx/"
+      },
+      {
+        "title": "粉丝切片：星布谷地第一个六冠王",
+        "url": "https://www.bilibili.com/video/BV1SrCvBWEJ3/"
+      }
+    ]
+  },
+  {
+    "term": "Taoker",
+    "aliases": ["桃客"],
+    "meaning": "把“桃”与英文 Poker 组合起来的六冠王相关谐音称号，来自六顶小魔女帽的展示场景。",
+    "subject": "社区造词",
+    "confidence": "中",
+    "boundary": "目前主要绑定星布谷地六冠王切片语境，不把它当作长期固定英文名。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "粉丝切片：六顶小魔女帽与 Taoker",
+        "url": "https://www.bilibili.com/video/BV1SrCvBWEJ3/"
+      }
+    ]
+  },
+  {
+    "term": "老农民",
+    "aliases": ["1300h老农民", "资深老农民"],
+    "meaning": "源自长期游玩星露谷物语的资历标签，后来也被带入星布谷地和原神开荒标题。",
+    "subject": "社区造词",
+    "confidence": "高",
+    "boundary": "这里指种田游戏经验与自我调侃，不是现实职业或身份判断。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方投稿：1300h 星露谷老农民看星布谷地 PV",
+        "url": "https://www.bilibili.com/video/BV1Ztn4z6Eb2/"
+      },
+      {
+        "title": "官方原神开荒合集：老农民/帽险家/六冠王",
+        "url": "https://www.bilibili.com/video/BV1RfC6BjEYB/"
+      }
+    ]
+  },
+  {
+    "term": "帽险家",
+    "aliases": ["帽险家小桃"],
+    "meaning": "星布谷地阶段形成的身份梗，把探索、收集与“小魔女帽”意象组合成“冒险家”的谐音。",
+    "subject": "社区造词",
+    "confidence": "高",
+    "boundary": "主要适用于星布谷地测试与相关开荒叙事，不是独立角色设定。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方原神开荒合集标题：老农民/帽险家/六冠王",
+        "url": "https://www.bilibili.com/video/BV1RfC6BjEYB/"
+      }
+    ]
+  },
+  {
+    "term": "师父",
+    "aliases": ["师徒", "壮壮师父", "石大壮师父"],
+    "meaning": "原神萌新开荒中，由熟悉游戏的朋友或水友教学、带队和互相拉扯形成的长期互动角色。",
+    "subject": "社区造词",
+    "confidence": "高",
+    "boundary": "这是公开直播中的节目关系称呼，不据此推断私下关系、消费义务或真实师承。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "粉丝切片：桃纸师徒极限拉扯",
+        "url": "https://www.bilibili.com/video/BV1r7iZBXESX/"
+      },
+      {
+        "title": "官方原神开荒录播章节：“师父来了”",
+        "url": "https://www.bilibili.com/video/BV1RfC6BjEYB/"
+      }
+    ]
+  },
+  {
+    "term": "桃莱美",
+    "aliases": ["桃莱美盛典"],
+    "meaning": "围绕直播演唱曲目形成的粉丝评奖、歌单盘点与颁奖活动名称，借用了“格莱美”的命名结构。",
+    "subject": "社区造词",
+    "confidence": "高",
+    "boundary": "它是粉丝社区娱乐活动，不是格莱美官方项目，也不代表专业音乐奖项认证。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方投稿：第二届桃莱美金桃曲颁奖盛典",
+        "url": "https://www.bilibili.com/video/BV1mbPpziEcq/"
+      },
+      {
+        "title": "官方录播章节：桃莱美十大金曲揭晓",
+        "url": "https://www.bilibili.com/video/BV1eGcPz9EeF/"
+      }
+    ]
+  },
+  {
+    "term": "金桃曲",
+    "aliases": ["桃莱美金桃曲"],
+    "meaning": "桃莱美活动中对入选或获奖代表曲目的趣味称呼。",
+    "subject": "社区造词",
+    "confidence": "高",
+    "boundary": "只描述桃莱美内部评选，不等同商业榜单、版权归属或专业奖项。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方投稿：第二届桃莱美金桃曲颁奖盛典",
+        "url": "https://www.bilibili.com/video/BV1mbPpziEcq/"
+      }
+    ]
+  },
+  {
+    "term": "桃曲",
+    "aliases": ["桃曲权威", "桃曲经典"],
+    "meaning": "对桃纸直播演唱曲目、相关歌回片段或社区熟悉曲目的概括称呼。",
+    "subject": "社区造词",
+    "confidence": "高",
+    "boundary": "并非所有由主播唱过的歌都自动成为固定桃曲，具体仍以当期歌回、桃莱美或录播标题为准。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播章节：“桃曲经典重唱”“桃曲权威”",
+        "url": "https://www.bilibili.com/video/BV1eGcPz9EeF/"
+      },
+      {
+        "title": "官方录播：桃莱美与桃曲盘点",
+        "url": "https://www.bilibili.com/video/BV1KwZ5BhE8a/"
+      }
+    ]
+  },
+  {
+    "term": "桃醉",
+    "aliases": ["全员桃醉"],
+    "meaning": "把“陶醉”替换为“桃醉”的歌回谐音梗，用来形容听桃曲时的投入气氛。",
+    "subject": "社区造词",
+    "confidence": "中",
+    "boundary": "目前主要见于歌回章节标题，属于情绪化标题梗，不表示客观演唱评价。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播章节：“史上最强歌回：全员桃醉”",
+        "url": "https://www.bilibili.com/video/BV16CiBBPECg/"
+      }
+    ]
+  },
+  {
+    "term": "耀斑",
+    "aliases": ["桃神版耀斑"],
+    "meaning": "主播演唱后形成较高辨识度的代表性歌曲梗，并被本人投稿标题和其他主播反应切片反复引用。",
+    "subject": "社区造词",
+    "confidence": "高",
+    "boundary": "词条指向公开演唱与二创传播，不替代原曲作者、原唱或歌曲版权信息。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方投稿：你可能不认识我，但是听过我唱的《耀斑》",
+        "url": "https://www.bilibili.com/video/BV1qCgY6EEF9/"
+      }
+    ]
+  },
+  {
+    "term": "双玛头",
+    "aliases": ["双玛头大成"],
+    "meaning": "原神火神玛薇卡相关操作手法；在桃纸语境中形成了从深夜苦练到独立展示、再到官方投稿教学的成长线。",
+    "subject": "主播状态",
+    "confidence": "高",
+    "boundary": "这是特定游戏角色的操作术语，不是桃纸原创的通用游戏概念；插件只记录她的学习与内容语境。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方投稿：人美声甜的小姐姐教你双玛头",
+        "url": "https://www.bilibili.com/video/BV1XqE96HEwz/"
+      },
+      {
+        "title": "粉丝切片合集：苦练、练成与双玛头大成",
+        "url": "https://www.bilibili.com/video/BV1TnojBAEsL/"
+      }
+    ]
+  },
+  {
+    "term": "哈基桃",
+    "aliases": [],
+    "meaning": "在无畏契约娱乐对局中出现的临时自称或角色化称呼，强调少击杀但得到队友欢呼的反差效果。",
+    "subject": "主播状态",
+    "confidence": "中",
+    "boundary": "目前证据集中于一条官方投稿，不把它扩写成稳定人格、粉丝阵营或长期固定昵称。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方投稿：哈基桃你这家伙…",
+        "url": "https://www.bilibili.com/video/BV1Q39dYHEjC/"
+      }
+    ]
+  },
+  {
+    "term": "学霸桃",
+    "aliases": [],
+    "meaning": "录播章节在求学或学习经历小故事中使用的“X 桃”临时称呼。",
+    "subject": "社区造词",
+    "confidence": "中",
+    "boundary": "能确认代表性章节，但不能据此认定为学历认证、能力测评或长期统一人设。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播章节：“学霸桃小故事”",
+        "url": "https://www.bilibili.com/video/BV1t9qPBpEZt/"
+      }
+    ]
+  },
+  {
+    "term": "小小桃大学习",
+    "aliases": ["桃子劝学"],
+    "meaning": "录播中用于学习游戏知识、复习操作或分享求学故事的一组章节化称呼。",
+    "subject": "主播状态",
+    "confidence": "高",
+    "boundary": "它描述直播内容环节，不是正式课程，也不表示每次出现都与学校教育有关。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播合集章节：“小小桃大学习”",
+        "url": "https://www.bilibili.com/video/BV1xt756wE5b/"
+      },
+      {
+        "title": "官方原神开荒列表章节：“桃子劝学”",
+        "url": "https://www.bilibili.com/list/6867955?bvid=BV1RfC6BjEYB"
       }
     ]
   },
   {
     "term": "AI 桃",
-    "aliases": ["AI桃"],
-    "meaning": "用于指代与桃纸相关的 AI 翻唱或 AI 内容。",
+    "aliases": ["AI桃", "AI桃纸", "AI桃曲"],
+    "meaning": "用于指代与桃纸声线、形象或内容相关的 AI 翻唱和 AI 生成内容。",
     "subject": "社区造词",
-    "confidence": "中",
-    "boundary": "它指向内容或模型，不代表主播本人演唱，也不意味着相关 AI 内容获得本人授权。",
-    "verified_at": "2026-07-30",
+    "confidence": "高",
+    "boundary": "它指向 AI 内容或模型，不代表主播本人演唱，也不意味着训练数据、声音使用或作品获得本人授权。",
+    "verified_at": "2026-08-01",
     "sources": [
       {
-        "title": "录播：“AI 桃曲”语境",
-        "url": "https://www.bilibili.com/video/BV1FZF7zqESa/"
+        "title": "官方录播章节：“开场闲聊看AI桃”",
+        "url": "https://www.bilibili.com/video/BV1KwZ5BhE8a/"
+      },
+      {
+        "title": "切片章节：桃纸评价 AI 桃纸唱歌",
+        "url": "https://www.bilibili.com/video/BV1YgJs63E1b/"
       }
     ]
   },
   {
     "term": "嘟嘟桃",
-    "aliases": [],
-    "meaning": "与特定模型、皮套或形象相关的临时“X 桃”称呼。",
+    "aliases": ["嘟嘟桃皮套"],
+    "meaning": "与特定虚拟模型、皮套或形象相关的“X 桃”称呼。",
     "subject": "社区造词",
-    "confidence": "中",
-    "boundary": "现有证据只支持模型或皮套语境，不把它写成独立人格或独立账号。",
-    "verified_at": "2026-07-30",
+    "confidence": "高",
+    "boundary": "公开说明支持模型或皮套语境，不把它写成独立人格、独立账号或与主播本人完全分离的角色。",
+    "verified_at": "2026-08-01",
     "sources": [
       {
-        "title": "录播：“嘟嘟桃”模型或皮套语境",
+        "title": "官方录播说明：感谢嘟嘟桃的画师与模型师",
         "url": "https://www.bilibili.com/video/BV1xt756wE5b/"
+      }
+    ]
+  },
+  {
+    "term": "桃区",
+    "aliases": ["桃区石神"],
+    "meaning": "对桃纸相关评论区、直播社区或围绕她形成的内容小圈子的简称。",
+    "subject": "社区造词",
+    "confidence": "中",
+    "boundary": "使用范围会随标题和评论变化，不代表正式组织、固定成员名单或平台官方分区。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播章节：“盖大楼 桃区石神？”",
+        "url": "https://www.bilibili.com/video/BV1KwZ5BhE8a/"
+      }
+    ]
+  },
+  {
+    "term": "桃国",
+    "aliases": ["桃国前事"],
+    "meaning": "把桃纸及其社区经历包装成“国度历史”的夸张叙事用语，用于回顾旧梗和关系变化。",
+    "subject": "社区造词",
+    "confidence": "中",
+    "boundary": "目前主要见于录播章节标题，是故事化修辞，不代表真实组织、阵营或政治隐喻。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播章节：“桃国前事：曾经，我通吃黑白两道”",
+        "url": "https://www.bilibili.com/video/BV1xt756wE5b/"
+      }
+    ]
+  },
+  {
+    "term": "叛桃",
+    "aliases": ["师门叛桃"],
+    "meaning": "师徒或阵营互动中，对临时倒向另一边、让节目效果发生反转的人的谐音称呼。",
+    "subject": "社区造词",
+    "confidence": "低",
+    "boundary": "目前只确认少量章节用例；它是剧情化玩笑，不应用于指责现实背叛或攻击具体群友。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播章节：“师门出现叛桃”",
+        "url": "https://www.bilibili.com/video/BV1eGcPz9EeF/"
+      }
+    ]
+  },
+  {
+    "term": "桃跑",
+    "aliases": ["扭头桃跑"],
+    "meaning": "把“逃跑”替换为“桃跑”的临场谐音，用于想回避、撤退或快速转场的轻松语境。",
+    "subject": "主播状态",
+    "confidence": "低",
+    "boundary": "目前主要是单章节标题梗，不说明主播现实中的回避习惯，也不应被当作稳定人格标签。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方录播章节：“我随时扭头桃跑”",
+        "url": "https://www.bilibili.com/video/BV1xt756wE5b/"
+      }
+    ]
+  },
+  {
+    "term": "桃犯",
+    "aliases": ["璃月桃犯"],
+    "meaning": "把“逃犯”替换为“桃犯”的标题谐音，用于原神璃月开荒中的跑图和剧情节目效果。",
+    "subject": "主播状态",
+    "confidence": "低",
+    "boundary": "纯属游戏内标题玩笑，不涉及现实违法，也不应脱离原神开荒场景用于评价本人。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方原神开荒录播：“桃神在璃月变桃犯”",
+        "url": "https://www.bilibili.com/video/BV1RfC6BjEYB/"
+      }
+    ]
+  },
+  {
+    "term": "小小桃纸做小小的事",
+    "aliases": ["做小小的事"],
+    "meaning": "主账号用于记录创作、生活或特别企划的一组系列化标题，强调从一件具体小事开始。",
+    "subject": "社区造词",
+    "confidence": "高",
+    "boundary": "这是官方投稿系列名，不代表所有生活内容都属于该系列。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方投稿系列：小小桃纸做小小的事",
+        "url": "https://www.bilibili.com/video/BV1J8AJzLEdj/"
+      },
+      {
+        "title": "官方投稿系列另一代表作",
+        "url": "https://www.bilibili.com/video/BV1vZwyzuEzB/"
+      }
+    ]
+  },
+  {
+    "term": "保姆级",
+    "aliases": ["保姆级教程", "手把手"],
+    "meaning": "主账号攻略内容的稳定表达，表示把安装或操作拆得足够细，尽量照顾零基础用户。",
+    "subject": "社区造词",
+    "confidence": "高",
+    "boundary": "它是内容难度和讲解方式标签，不保证适配所有设备、版本或个别报错。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方投稿：星露谷 1.6 最新保姆级 Mod 安装教程",
+        "url": "https://www.bilibili.com/video/BV1XK421x7H9/"
+      }
+    ]
+  },
+  {
+    "term": "红字",
+    "aliases": ["SMAPI红字", "红字排错"],
+    "meaning": "星露谷 Mod 场景中对 SMAPI 错误或警告输出的常用简称，也是主账号教程的重要问题类型。",
+    "subject": "社区造词",
+    "confidence": "高",
+    "boundary": "红字不一定都能用同一办法解决，应结合第一条错误、版本、前置与完整日志判断。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方投稿：一个视频解决所有 SMAPI 红字",
+        "url": "https://www.bilibili.com/video/BV17S421R7YT/"
+      }
+    ]
+  },
+  {
+    "term": "不恰米",
+    "aliases": ["不恰米真实评价"],
+    "meaning": "投稿标题中用来强调没有商业合作费用、希望呈现个人真实体验的口语表达。",
+    "subject": "社区造词",
+    "confidence": "高",
+    "boundary": "只说明对应投稿的自我披露，不能据此推断账号所有评测都无商业关系；仍应逐条查看简介和声明。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方投稿：不恰米真实评价",
+        "url": "https://www.bilibili.com/video/BV1YVWgzoEuP/"
+      }
+    ]
+  },
+  {
+    "term": "深度体验",
+    "aliases": ["爆肝测评", "1300h老乡测评"],
+    "meaning": "主账号评测内容的一种方法标签，强调长期同类游戏经验、较长体验和较完整的信息整理。",
+    "subject": "社区造词",
+    "confidence": "高",
+    "boundary": "它体现投入与内容定位，不等于无偏见、专业机构认证或对所有玩家都适用。",
+    "verified_at": "2026-08-01",
+    "sources": [
+      {
+        "title": "官方投稿：爆肝 5000 字、1300h 老乡真实测评",
+        "url": "https://www.bilibili.com/video/BV12Bpgz2Emz/"
+      },
+      {
+        "title": "官方投稿：资深老农民深度体验星布谷地",
+        "url": "https://www.bilibili.com/video/BV1LYdmBaEAq/"
       }
     ]
   }

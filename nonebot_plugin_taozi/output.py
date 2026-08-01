@@ -57,11 +57,18 @@ async def finish_fortune_card(
     day: str,
     owner_name: str,
     owner_id: str,
+    selected_color: str | None,
     fallback_text: str,
 ) -> None:
     await _finish_image_or_text(
         matcher,
-        lambda: render_fortune_card(fortune, day, owner_name, owner_id),
+        lambda: render_fortune_card(
+            fortune,
+            day,
+            owner_name,
+            owner_id,
+            selected_color,
+        ),
         fallback_text,
     )
 

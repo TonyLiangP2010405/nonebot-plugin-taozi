@@ -20,6 +20,7 @@ import skia
 from nonebot import logger
 
 from .fortune import Fortune
+from .interactions import get_color_fortune_note
 from .models import LexiconEntry
 
 WIDTH = 760
@@ -60,6 +61,35 @@ class CardSection:
 
 
 @dataclass(frozen=True, slots=True)
+class CardTheme:
+    bg_start: str
+    bg_end: str
+    primary: str
+    accent: str
+    section: str
+    chip_fill: str
+    chip_text: str
+
+
+DEFAULT_CARD_THEME = CardTheme(
+    bg_start=COLOR_BG_START,
+    bg_end=COLOR_BG_END,
+    primary=COLOR_PRIMARY,
+    accent=COLOR_ACCENT,
+    section=COLOR_SECTION,
+    chip_fill="#FFE7EC",
+    chip_text=COLOR_PRIMARY,
+)
+
+FORTUNE_COLOR_THEMES = {
+    "白桃": CardTheme("#FFF8F4", "#FDE9EB", "#A95068", "#F3A8B8", "#FFF8F8", "#FCE8ED", "#91465A"),
+    "黑桃": CardTheme("#EFEDF5", "#DDD9E9", "#514966", "#716687", "#F5F3F8", "#E6E1EE", "#514966"),
+    "红桃": CardTheme("#FFF0F1", "#FFE0DA", "#C74656", "#EA6672", "#FFF6F6", "#FFE2E5", "#A93848"),
+    "黄桃": CardTheme("#FFF8E7", "#FFE9B7", "#9A6A18", "#E8B64D", "#FFFAEE", "#FFF0C8", "#7E5716"),
+}
+
+
+@dataclass(frozen=True, slots=True)
 class CardSpec:
     title: str
     subtitle: str
@@ -68,6 +98,7 @@ class CardSpec:
     footer: str
     qr_url: str | None = None
     qr_label: str | None = None
+    theme: CardTheme = DEFAULT_CARD_THEME
 
 
 @dataclass(frozen=True, slots=True)
@@ -205,14 +236,14 @@ def _prepare_sections(sections: tuple[CardSection, ...]) -> tuple[PreparedSectio
     return tuple(prepared)
 
 
-def _chip_colors(text: str) -> tuple[int, int]:
+def _chip_colors(text: str, theme: CardTheme) -> tuple[int, int]:
     if "高" in text:
         return _color(COLOR_GREEN), _color(COLOR_GREEN_TEXT)
     if "中" in text:
         return _color(COLOR_GOLD), _color(COLOR_GOLD_TEXT)
     if "低" in text:
         return _color(COLOR_GRAY), _color(COLOR_GRAY_TEXT)
-    return _color("#FFE7EC"), _color(COLOR_PRIMARY)
+    return _color(theme.chip_fill), _color(theme.chip_text)
 
 
 def _chip_width(text: str) -> float:
@@ -316,7 +347,7 @@ def _render_card_sync(spec: CardSpec) -> bytes:
 
     gradient = skia.GradientShader.MakeLinear(
         [(0, 0), (WIDTH, height)],
-        [_color(COLOR_BG_START), _color(COLOR_BG_END)],
+        [_color(spec.theme.bg_start), _color(spec.theme.bg_end)],
         None,
         skia.TileMode.kClamp,
     )
@@ -339,13 +370,20 @@ def _render_card_sync(spec: CardSpec) -> bytes:
         skia.Rect.MakeXYWH(OUTER_PADDING, OUTER_PADDING, 12, height - OUTER_PADDING * 2),
         6,
         6,
-        skia.Paint(AntiAlias=True, Color=_color(COLOR_ACCENT)),
+        skia.Paint(AntiAlias=True, Color=_color(spec.theme.accent)),
     )
     _draw_character_background(canvas)
 
     y = 58.0
     subtitle_font = _font(18, bold=True)
-    _draw_line(canvas, spec.subtitle.upper(), CONTENT_X, y, subtitle_font, _color(COLOR_PRIMARY))
+    _draw_line(
+        canvas,
+        spec.subtitle.upper(),
+        CONTENT_X,
+        y,
+        subtitle_font,
+        _color(spec.theme.primary),
+    )
     y += 34
     for line in title_lines:
         _draw_line(canvas, line, CONTENT_X, y, title_font, _color(COLOR_TEXT))
@@ -355,7 +393,7 @@ def _render_card_sync(spec: CardSpec) -> bytes:
         x = float(CONTENT_X)
         for chip in row:
             width = _chip_width(chip)
-            fill, text_color = _chip_colors(chip)
+            fill, text_color = _chip_colors(chip, spec.theme)
             pill = skia.RRect.MakeRectXY(skia.Rect.MakeXYWH(x, y, width, 32), 16, 16)
             canvas.drawRRect(pill, skia.Paint(AntiAlias=True, Color=fill))
             _draw_line(canvas, chip, x + 15, y + 5, _font(18, bold=True), text_color)
@@ -372,7 +410,7 @@ def _render_card_sync(spec: CardSpec) -> bytes:
         )
         canvas.drawRRect(
             section_rect,
-            skia.Paint(AntiAlias=True, Color=_color(COLOR_SECTION)),
+            skia.Paint(AntiAlias=True, Color=_color(spec.theme.section)),
         )
         text_y = y + 20
         if section.label:
@@ -382,7 +420,7 @@ def _render_card_sync(spec: CardSpec) -> bytes:
                 CONTENT_X + 24,
                 text_y,
                 _font(18, bold=True),
-                _color(COLOR_PRIMARY),
+                _color(spec.theme.primary),
             )
             text_y += 30
         for line in section.body_lines:
@@ -500,16 +538,25 @@ async def render_fortune_card(
     day: str,
     owner_name: str,
     owner_id: str,
+    selected_color: str | None = None,
 ) -> bytes:
+    chips = [f"关键词 {fortune.keyword}", "仅供娱乐"]
+    sections = [
+        CardSection("桃签主人", f"{owner_name}（账号 {owner_id}）"),
+        CardSection("今日提示", fortune.message),
+    ]
+    color_note = get_color_fortune_note(selected_color)
+    if selected_color and color_note:
+        chips.insert(0, f"自选 {selected_color}")
+        sections.append(CardSection(f"{selected_color}附言", color_note))
+
     spec = CardSpec(
         title=fortune.name,
         subtitle=f"今日桃签 · {day}",
-        chips=(f"关键词 {fortune.keyword}", "仅供娱乐"),
-        sections=(
-            CardSection("桃签主人", f"{owner_name}（账号 {owner_id}）"),
-            CardSection("今日提示", fortune.message),
-        ),
+        chips=tuple(chips),
+        sections=tuple(sections),
         footer="互动文案不是主播原话；同一账号当天固定，次日重新抽取。",
+        theme=FORTUNE_COLOR_THEMES.get(selected_color or "", DEFAULT_CARD_THEME),
     )
     return await asyncio.to_thread(_render_card_sync, spec)
 

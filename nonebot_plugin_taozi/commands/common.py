@@ -51,6 +51,7 @@ async def require_fun(
     event: MessageEvent,
     *,
     command_key: str,
+    apply_default_cooldown: bool = True,
 ) -> None:
     if not await is_fun_enabled(event):
         await finish_message_card(
@@ -59,6 +60,9 @@ async def require_fun(
             "本会话的桃趣互动已关闭；桃系词典仍可正常使用。",
             chips=("词典仍可用",),
         )
+
+    if not apply_default_cooldown:
+        return
 
     cooldown_key = f"{command_key}:{get_scope_id(event)}:{event.get_user_id()}"
     remaining = fun_cooldown.acquire(cooldown_key)

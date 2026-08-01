@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import asyncio
 import os
+import time
 from pathlib import Path
 
 from nonebot import logger
@@ -62,6 +63,13 @@ class TaoziStateStore:
         await self._ensure_loaded()
         return self._state.self_colors.get(scope_id, {}).get(user_id)
 
+    async def get_self_color_counts(self, scope_id: str) -> dict[str, int]:
+        await self._ensure_loaded()
+        counts: dict[str, int] = {}
+        for color in self._state.self_colors.get(scope_id, {}).values():
+            counts[color] = counts.get(color, 0) + 1
+        return counts
+
     async def set_self_color(self, scope_id: str, user_id: str, color: str) -> None:
         await self._ensure_loaded()
         async with self._lock:
@@ -80,3 +88,28 @@ class TaoziStateStore:
             await self._save_locked()
             return True
 
+    async def acquire_random_term(
+        self,
+        scope_id: str,
+        user_id: str,
+        cooldown_seconds: int,
+        *,
+        now: float | None = None,
+    ) -> float:
+        if cooldown_seconds <= 0:
+            return 0.0
+
+        await self._ensure_loaded()
+        current = time.time() if now is None else now
+        async with self._lock:
+            users = self._state.random_term_last_used.setdefault(scope_id, {})
+            previous = users.get(user_id)
+            if previous is not None:
+                elapsed = max(0.0, current - previous)
+                remaining = cooldown_seconds - elapsed
+                if remaining > 0:
+                    return remaining
+
+            users[user_id] = current
+            await self._save_locked()
+            return 0.0

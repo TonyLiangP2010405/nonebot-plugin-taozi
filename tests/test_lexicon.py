@@ -27,6 +27,24 @@ def test_unknown_term_returns_suggestions() -> None:
     assert BUILTIN_LEXICON.find("不存在的桃") is None
 
 
+def test_expanded_lexicon_has_sourced_terms_across_content_families() -> None:
+    assert len(BUILTIN_LEXICON.entries) >= 35
+    for term in (
+        "桃神",
+        "六冠王",
+        "桃莱美",
+        "双玛头",
+        "小小桃大学习",
+        "嘟嘟桃",
+        "保姆级",
+        "红字",
+        "深度体验",
+    ):
+        entry = BUILTIN_LEXICON.find(term)
+        assert entry is not None
+        assert entry.sources
+
+
 def test_render_entry_keeps_boundary_and_source() -> None:
     entry = BUILTIN_LEXICON.find("红桃")
     assert entry is not None
@@ -48,4 +66,3 @@ def test_duplicate_alias_is_rejected() -> None:
         assert "别名冲突" in str(error)
     else:
         raise AssertionError("重复别名应被拒绝")
-

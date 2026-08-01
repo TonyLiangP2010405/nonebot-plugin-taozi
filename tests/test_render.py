@@ -42,12 +42,14 @@ async def test_lexicon_card_is_png_with_dynamic_height() -> None:
 
 
 @pytest.mark.asyncio
-async def test_fortune_card_is_png() -> None:
+@pytest.mark.parametrize("selected_color", ("白桃", "黑桃", "红桃", "黄桃"))
+async def test_each_color_fortune_card_is_png(selected_color: str) -> None:
     data = await render_fortune_card(
         FORTUNES[0],
         "2026-07-30",
         "测试桃",
         "10001",
+        selected_color,
     )
     assert_valid_png(data)
 
@@ -68,12 +70,17 @@ async def test_fortune_card_has_explicit_owner_section(
         "2026-07-31",
         "群名片桃",
         "10001",
+        "黑桃",
     )
 
     assert data == b"rendered"
     assert captured[0].subtitle == "今日桃签 · 2026-07-31"
     assert captured[0].sections[0].label == "桃签主人"
     assert captured[0].sections[0].body == "群名片桃（账号 10001）"
+    assert captured[0].chips[0] == "自选 黑桃"
+    assert captured[0].sections[-1].label == "黑桃附言"
+    assert "玩笑" in captured[0].sections[-1].body
+    assert captured[0].theme == render.FORTUNE_COLOR_THEMES["黑桃"]
 
 
 @pytest.mark.asyncio

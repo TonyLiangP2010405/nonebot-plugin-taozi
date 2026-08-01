@@ -1,34 +1,32 @@
-from nonebot import on_command
-from nonebot.adapters.onebot.v11 import Message
-from nonebot.params import CommandArg
+from nonebot import on_regex
+from nonebot.params import RegexStr
 
 from ..config import plugin_config
 from ..lexicon import BUILTIN_LEXICON, render_entry
 from ..output import finish_lexicon_card, finish_message_card
 
-lexicon_command = on_command(
-    "桃系词典",
-    aliases={"桃词典"},
+lexicon_command = on_regex(
+    r"^(?:桃系词典|桃词典)(?:\s+(?P<query>.+?))?\s*$",
     priority=10,
     block=True,
 )
 
 
 @lexicon_command.handle()
-async def handle_lexicon(args: Message = CommandArg()) -> None:
-    query = args.extract_plain_text().strip()
+async def handle_lexicon(query: str | None = RegexStr("query")) -> None:
+    query = (query or "").strip()
     if not query:
         body = (
             "已收录桃系词条：\n"
             f"{BUILTIN_LEXICON.list_terms()}\n\n"
-            "用法：/桃系词典 黑桃"
+            "用法：桃系词典 黑桃"
         )
         await finish_message_card(
             lexicon_command,
             "桃系词典",
             body,
             chips=("有出处", "可修订"),
-            footer="输入“/桃系词典 词条名”查看解释、边界和来源。",
+            footer="输入“桃系词典 词条名”查看解释、边界和来源。",
         )
 
     entry = BUILTIN_LEXICON.find(query)

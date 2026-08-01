@@ -27,4 +27,4 @@ class PersistedState(BaseModel):
     version: Literal[1] = 1
     disabled_groups: set[str] = Field(default_factory=set)
     self_colors: dict[str, dict[str, str]] = Field(default_factory=dict)
-
+    random_term_last_used: dict[str, dict[str, float]] = Field(default_factory=dict)

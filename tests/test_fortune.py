@@ -13,9 +13,11 @@ def test_daily_fortune_is_stable_for_same_user_and_day() -> None:
     first = pick_daily_fortune("10001", day)
     second = pick_daily_fortune("10001", day)
     assert first == second
-    rendered = render_fortune(first, "测试桃", "10001")
+    rendered = render_fortune(first, "测试桃", "10001", "黑桃")
     assert "测试桃的今日桃签" in rendered
     assert "账号：10001" in rendered
+    assert "自选桃色：黑桃" in rendered
+    assert "玩笑" in rendered
     assert "不是主播原话" in rendered
 
 
@@ -47,7 +49,7 @@ def test_every_user_is_stable_until_calendar_day_changes() -> None:
 
 
 def test_fortune_pool_has_enough_unique_options() -> None:
-    assert len(FORTUNES) >= 24
+    assert len(FORTUNES) >= 96
     assert len({fortune.name for fortune in FORTUNES}) == len(FORTUNES)
     assert len({fortune.message for fortune in FORTUNES}) == len(FORTUNES)
 
